@@ -10,6 +10,7 @@ export async function GET(request: NextRequest, params: typeRequestParams){
 
     console.log('-'.repeat(100))
     console.log(params)
+    console.log(iconParams)
     console.log('-'.repeat(100))
 
     const svg = `
