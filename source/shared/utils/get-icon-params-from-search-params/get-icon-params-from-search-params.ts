@@ -10,10 +10,10 @@ import {isValidColor} from "@shared/utils/is-valid-color/is-valid-color";
 
 export const getIconParamsFromSearchParams = (paramsObj: URLSearchParams): typeIconParamsObj => {
 
-    const rawIconSize = parseInt(paramsObj.get('size') ?? '')
+    const rawIconSize = parseInt(paramsObj.get('size')) || 0
     const iconSize = rawIconSize < minIconSize || rawIconSize > maxIconSize ? defaultIconSize : rawIconSize
 
-    const rawBorderRadius = paramsObj.get('border_radius') ?? ''
+    const rawBorderRadius = paramsObj.get('border_radius') || ''
     let borderRadius: number = defaultBorderRadiusSize
     switch (rawBorderRadius) {
         case 'sm':
@@ -27,10 +27,10 @@ export const getIconParamsFromSearchParams = (paramsObj: URLSearchParams): typeI
             break
     }
 
-    const rawFillColor = paramsObj.get('fill_color') ?? ''
+    const rawFillColor = paramsObj.get('fill_color') || ''
     const fillColor = isValidColor(rawFillColor) ? '#' + rawFillColor : defaultFillColor
 
-    const rawIconColor = paramsObj.get('icon_color') ?? ''
+    const rawIconColor = paramsObj.get('icon_color') || ''
     const iconColor = isValidColor(rawIconColor) ? '#' + rawIconColor : defaultIconColor
 
     return  {
