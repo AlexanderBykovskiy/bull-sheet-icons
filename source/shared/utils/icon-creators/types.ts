@@ -1,17 +1,7 @@
-type typeIcon = {
-    iconSize: number
+export type typeIconCreateFunctionParams = {
+    iconSize: number,
+    fillColor: string,
+    iconColor: string,
+    borderRadius: number,
 }
-
-type typeIconFill = {
-    fillColor: string
-    iconColor: string
-}
-
-type typeIconRectangle = {
-    borderRadius: number
-}
-
-
-export type typeIconFillCircleCreateFunctionParams = typeIcon & typeIconFill
-export type typeIconFillRectangleCreateFunctionParams = typeIcon & typeIconFill & typeIconRectangle
 

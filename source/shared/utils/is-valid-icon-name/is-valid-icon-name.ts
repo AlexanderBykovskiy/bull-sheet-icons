@@ -4,7 +4,7 @@ import {iconListObj} from "@shared/configs/icons.config";
 
 export const isValidIconName = (iconCollection: string, iconVariant: string, iconName: string): boolean => {
     if (isValidIconCollection(iconCollection) && isValidIconVariant(iconVariant)) {
-        return iconName in iconListObj[iconCollection][iconVariant]
+        return iconName in (iconListObj[iconCollection as keyof typeof iconListObj][iconVariant as keyof (typeof iconListObj)[keyof typeof iconListObj]])
     }
     return false
 }

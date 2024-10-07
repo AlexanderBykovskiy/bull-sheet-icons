@@ -1,6 +1,6 @@
-import {typeIconFillRectangleCreateFunctionParams} from "../../icon-creators/types";
+import {typeIconCreateFunctionParams} from "@shared/utils/icon-creators/types";
 
-export const errorIcon = (params: typeIconFillRectangleCreateFunctionParams) => {
+export const errorIcon = (params: typeIconCreateFunctionParams) => {
     const {iconSize, borderRadius, fillColor, iconColor} = params
     return `
         <svg viewBox="0 0 340 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="${iconSize}" width="${Math.ceil(340 * iconSize / 100)}">

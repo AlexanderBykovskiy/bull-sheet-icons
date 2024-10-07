@@ -1,11 +1,10 @@
 import {
-    typeIconFillCircleCreateFunctionParams,
-    typeIconFillRectangleCreateFunctionParams
+    typeIconCreateFunctionParams
 } from "../../icon-creators/types";
 import {iconVariants} from "@shared/configs/icons.config";
 import {errorIcon} from "./error-icon";
 
-export const telegramIcon = (variant: iconVariants, params: typeIconFillRectangleCreateFunctionParams | typeIconFillCircleCreateFunctionParams) => {
+export const telegramIcon = (variant: iconVariants, params: typeIconCreateFunctionParams) => {
     const {iconSize, borderRadius, fillColor, iconColor} = params
     switch (variant) {
         case iconVariants.squareFill:
@@ -21,6 +20,6 @@ export const telegramIcon = (variant: iconVariants, params: typeIconFillRectangl
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M76.1945 25.9712L65.973 75.137C65.7323 76.2978 64.3711 76.8238 63.4107 76.1259L49.4575 65.9956C48.6104 65.3805 47.4554 65.4132 46.6445 66.0744L38.9083 72.3806C38.0106 73.1148 36.6576 72.7056 36.3138 71.5999L30.9421 54.3243L17.0639 49.1447C15.6541 48.6166 15.6421 46.6264 17.0478 46.0849L74.0044 24.1125C75.2119 23.6456 76.4576 24.7033 76.1945 25.9712ZM35.4485 51.5671L62.5717 34.8621C63.0589 34.5628 63.5606 35.2219 63.1415 35.6101L40.7573 56.4174C39.9703 57.1495 39.463 58.1302 39.319 59.1941L38.5569 64.8448C38.4553 65.5991 37.3961 65.6737 37.1875 64.9436L34.255 54.6394C33.9196 53.464 34.4089 52.2086 35.4485 51.5671Z" fill="${iconColor}"/>
                 </svg>`
         default:
-            return errorIcon(params as typeIconFillRectangleCreateFunctionParams)
+            return errorIcon(params)
     }
 }

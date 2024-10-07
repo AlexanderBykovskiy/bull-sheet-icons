@@ -1,11 +1,10 @@
 import {
-    typeIconFillCircleCreateFunctionParams,
-    typeIconFillRectangleCreateFunctionParams
+    typeIconCreateFunctionParams
 } from "../../icon-creators/types";
 import {iconVariants} from "@shared/configs/icons.config";
 import {errorIcon} from "./error-icon";
 
-export const linkedinIcon = (variant: iconVariants, params: typeIconFillRectangleCreateFunctionParams | typeIconFillCircleCreateFunctionParams) => {
+export const linkedinIcon = (variant: iconVariants, params: typeIconCreateFunctionParams) => {
     const {iconSize, borderRadius, fillColor, iconColor} = params
     switch (variant) {
         case iconVariants.squareFill:
@@ -25,6 +24,6 @@ export const linkedinIcon = (variant: iconVariants, params: typeIconFillRectangl
                     <path d="M65.9957 76.5118H78V55.8069C78 44.7175 72.0788 39.5584 64.1788 39.5584C57.802 39.5584 54.9552 43.0677 53.36 45.5223V40.406H41.3534C41.5143 43.7932 41.3534 76.512 41.3534 76.512H53.36V56.3474C53.36 55.2654 53.4425 54.1929 53.7582 53.4213C54.6268 51.2613 56.5986 49.0315 59.9166 49.0315C64.2613 49.0315 65.9957 52.3433 65.9957 57.195V76.5118Z" fill="${iconColor}"/>
                 </svg>`
         default:
-            return errorIcon(params as typeIconFillRectangleCreateFunctionParams)
+            return errorIcon(params)
     }
 }
