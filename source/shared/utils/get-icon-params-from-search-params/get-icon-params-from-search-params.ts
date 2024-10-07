@@ -1,12 +1,11 @@
 import {
-    defaultBorderRadiusSize,
-    defaultFillColor, defaultIconColor,
+    defaultBorderRadiusSize, defaultFillColor, defaultIconColor,
     defaultIconSize, lgBorderRadiusSize,
     maxIconSize, mdBorderRadiusSize,
-    minIconSize, smBorderRadiusSize
+    minIconSize, smBorderRadiusSize, xlBorderRadiusSize, xxLBorderRadiusSize
 } from "@shared/configs/default-icons.config";
 import {typeIconParamsObj} from "./types";
-import {isValidColor} from "@shared/utils/is-valid-color/is-valid-color";
+import {createValidColor} from "@shared/utils/create-valid-color/create-valid-color";
 
 export const getIconParamsFromSearchParams = (paramsObj: URLSearchParams): typeIconParamsObj => {
 
@@ -25,13 +24,19 @@ export const getIconParamsFromSearchParams = (paramsObj: URLSearchParams): typeI
         case 'lg':
             borderRadius = lgBorderRadiusSize
             break
+        case 'xl':
+            borderRadius = xlBorderRadiusSize
+            break
+        case 'xxl':
+            borderRadius = xxLBorderRadiusSize
+            break
     }
 
-    const rawFillColor = paramsObj.get('fill_color') || ''
-    const fillColor = isValidColor(rawFillColor) ? '#' + rawFillColor : defaultFillColor
+    const rawFillColor = paramsObj.get('fill_color') || defaultFillColor
+    const fillColor = createValidColor(rawFillColor)
 
-    const rawIconColor = paramsObj.get('icon_color') || ''
-    const iconColor = isValidColor(rawIconColor) ? '#' + rawIconColor : defaultIconColor
+    const rawIconColor = paramsObj.get('icon_color') || defaultIconColor
+    const iconColor = createValidColor(rawIconColor)
 
     return  {
         iconSize,
