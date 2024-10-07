@@ -1,8 +1,8 @@
 import {
-    defaultBorderRadiusSize, defaultFillColor, defaultIconColor,
-    defaultIconSize, lgBorderRadiusSize,
-    maxIconSize, mdBorderRadiusSize,
-    minIconSize, smBorderRadiusSize, xlBorderRadiusSize, xxLBorderRadiusSize
+    defaultBorderRadiusSize, defaultBorderWeight, defaultFillColor, defaultIconColor,
+    defaultIconSize, lgBorderRadiusSize, lgBorderWeight,
+    maxIconSize, mdBorderRadiusSize, mdBorderWeight,
+    minIconSize, noneBorderWeight, smBorderRadiusSize, smBorderWeight, xlBorderRadiusSize, xxLBorderRadiusSize
 } from "@shared/configs/default-icons.config";
 import {typeIconParamsObj} from "./types";
 import {createValidColor} from "@shared/utils/create-valid-color/create-valid-color";
@@ -32,6 +32,20 @@ export const getIconParamsFromSearchParams = (paramsObj: URLSearchParams): typeI
             break
     }
 
+    const rawBorderWeight = paramsObj.get('border_weight') || ''
+    let borderWeight: number = defaultBorderWeight
+    switch (rawBorderWeight) {
+        case 'sm':
+            borderWeight = smBorderWeight
+            break
+        case 'md':
+            borderWeight = mdBorderWeight
+            break
+        case 'lg':
+            borderWeight = lgBorderWeight
+            break
+    }
+
     const rawFillColor = paramsObj.get('fill_color') || defaultFillColor
     const fillColor = createValidColor(rawFillColor)
 
@@ -43,5 +57,6 @@ export const getIconParamsFromSearchParams = (paramsObj: URLSearchParams): typeI
         borderRadius,
         fillColor,
         iconColor,
+        borderWeight,
     }
 }

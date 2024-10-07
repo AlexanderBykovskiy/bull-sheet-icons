@@ -3,5 +3,6 @@ export type typeIconCreateFunctionParams = {
     fillColor: string,
     iconColor: string,
     borderRadius: number,
+    borderWeight: number,
 }
 

@@ -12,7 +12,7 @@ export enum iconCollections {
 
 export enum iconVariants {
     squareFill = 'square-fill',
-    // rectangleFill = 'rectangle-fill',
+    rectangleFill = 'rectangle-fill',
     circleFill = 'circle-fill',
 }
 
@@ -31,6 +31,11 @@ export const iconListObj: typeIconListObjObject = {
             facebook: (params: typeIconCreateFunctionParams) => facebookIcon(iconVariants.circleFill, params),
             linkedin: (params: typeIconCreateFunctionParams) => linkedinIcon(iconVariants.circleFill, params),
             telegram: (params: typeIconCreateFunctionParams) => telegramIcon(iconVariants.circleFill, params),
+        },
+        [iconVariants.rectangleFill]: {
+            facebook: (params: typeIconCreateFunctionParams) => facebookIcon(iconVariants.rectangleFill, params),
+            linkedin: (params: typeIconCreateFunctionParams) => linkedinIcon(iconVariants.rectangleFill, params),
+            telegram: (params: typeIconCreateFunctionParams) => telegramIcon(iconVariants.rectangleFill, params),
         }
     }
 }
