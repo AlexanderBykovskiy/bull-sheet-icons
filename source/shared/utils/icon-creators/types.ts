@@ -12,5 +12,6 @@ type typeIconRectangle = {
 }
 
 
+export type typeIconFillCircleCreateFunctionParams = typeIcon & typeIconFill
 export type typeIconFillRectangleCreateFunctionParams = typeIcon & typeIconFill & typeIconRectangle
 
