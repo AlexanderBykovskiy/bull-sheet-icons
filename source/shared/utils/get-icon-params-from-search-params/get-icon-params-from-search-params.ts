@@ -2,7 +2,7 @@ import {
     defaultBorderRadiusSize, defaultBorderWeight, defaultFillColor, defaultIconColor,
     defaultIconSize, lgBorderRadiusSize, lgBorderWeight,
     maxIconSize, mdBorderRadiusSize, mdBorderWeight,
-    minIconSize, noneBorderWeight, smBorderRadiusSize, smBorderWeight, xlBorderRadiusSize, xxLBorderRadiusSize
+    minIconSize, smBorderRadiusSize, smBorderWeight, xlBorderRadiusSize, xxLBorderRadiusSize
 } from "@shared/configs/default-icons.config";
 import {typeIconParamsObj} from "./types";
 import {createValidColor} from "@shared/utils/create-valid-color/create-valid-color";
