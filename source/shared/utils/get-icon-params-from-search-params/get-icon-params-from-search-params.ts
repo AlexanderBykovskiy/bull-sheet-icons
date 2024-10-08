@@ -52,11 +52,19 @@ export const getIconParamsFromSearchParams = (paramsObj: URLSearchParams): typeI
     const rawIconColor = paramsObj.get('icon_color') || defaultIconColor
     const iconColor = createValidColor(rawIconColor)
 
+    const rawBackgroundColor = paramsObj.get('bg_color') || rawIconColor
+    const backgroundColor = createValidColor(rawBackgroundColor)
+
+    const rawTextColor = paramsObj.get('text_color') || rawFillColor
+    const textColor = createValidColor(rawTextColor)
+
     return  {
         iconSize,
         borderRadius,
         fillColor,
         iconColor,
+        backgroundColor,
+        textColor,
         borderWeight,
     }
 }
