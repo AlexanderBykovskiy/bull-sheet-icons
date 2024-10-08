@@ -14,29 +14,14 @@ export enum iconVariants {
     circleFill = 'circle-fill',
 }
 
-type typeIconVariantObject = {[key: string]: (params: typeIconCreateFunctionParams) => string}
-type typeIconCollectionObject = {[key in iconVariants]: typeIconVariantObject}
-type typeIconListObjObject = {[key in iconCollections]: typeIconCollectionObject}
+type typeIconVariantObject = {[key: string]: (variant: iconVariants, params: typeIconCreateFunctionParams) => string}
+type typeIconListObjObject = {[key in iconCollections]: typeIconVariantObject}
 
 export const iconListObj: typeIconListObjObject = {
     [iconCollections.socialMedia]: {
-        [iconVariants.squareFill]: {
-            facebook: (params: typeIconCreateFunctionParams) => facebookIcon(iconVariants.squareFill, params),
-            instagram: (params: typeIconCreateFunctionParams) => instagramIcon(iconVariants.squareFill, params),
-            linkedin: (params: typeIconCreateFunctionParams) => linkedinIcon(iconVariants.squareFill, params),
-            telegram: (params: typeIconCreateFunctionParams) => telegramIcon(iconVariants.squareFill, params),
-        },
-        [iconVariants.circleFill]: {
-            facebook: (params: typeIconCreateFunctionParams) => facebookIcon(iconVariants.circleFill, params),
-            instagram: (params: typeIconCreateFunctionParams) => instagramIcon(iconVariants.circleFill, params),
-            linkedin: (params: typeIconCreateFunctionParams) => linkedinIcon(iconVariants.circleFill, params),
-            telegram: (params: typeIconCreateFunctionParams) => telegramIcon(iconVariants.circleFill, params),
-        },
-        [iconVariants.rectangleFill]: {
-            facebook: (params: typeIconCreateFunctionParams) => facebookIcon(iconVariants.rectangleFill, params),
-            instagram: (params: typeIconCreateFunctionParams) => instagramIcon(iconVariants.rectangleFill, params),
-            linkedin: (params: typeIconCreateFunctionParams) => linkedinIcon(iconVariants.rectangleFill, params),
-            telegram: (params: typeIconCreateFunctionParams) => telegramIcon(iconVariants.rectangleFill, params),
-        }
+        facebook: (variant: iconVariants, params: typeIconCreateFunctionParams) => facebookIcon(variant, params),
+        instagram: (variant: iconVariants, params: typeIconCreateFunctionParams) => instagramIcon(variant, params),
+        linkedin: (variant: iconVariants, params: typeIconCreateFunctionParams) => linkedinIcon(variant, params),
+        telegram: (variant: iconVariants, params: typeIconCreateFunctionParams) => telegramIcon(variant, params),
     }
 }

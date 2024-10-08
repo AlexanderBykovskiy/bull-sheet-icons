@@ -7,10 +7,6 @@ import {errorIcon} from "./error-icon";
 export const facebookIcon = (variant: iconVariants, params: typeIconCreateFunctionParams): string => {
     const {iconSize, borderRadius, borderWeight, fillColor, iconColor, backgroundColor, textColor} = params
 
-    console.log('-'.repeat(100))
-    console.log('params', params)
-    console.log('-'.repeat(100))
-
     console.log(borderWeight, borderWeight / 2)
     switch (variant) {
         case iconVariants.squareFill:
