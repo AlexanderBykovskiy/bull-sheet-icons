@@ -1,2 +1,5 @@
 export {errorIcon} from './functions/error-icon'
 export {linkedinIcon} from './functions/linkedin-icon'
+export {telegramIcon} from './functions/telegram-icon'
+export {instagramIcon} from './functions/instagram-icon'
+export {facebookIcon} from './functions/facebook-icon'
