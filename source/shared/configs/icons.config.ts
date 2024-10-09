@@ -1,7 +1,7 @@
 import {
     typeIconCreateFunctionParams
 } from "@shared/utils/icon-creators/types";
-import {linkedinIcon, telegramIcon, okIcon, instagramIcon, tiktokIcon} from "@shared/utils/icon-creators";
+import {linkedinIcon, telegramIcon, okIcon, instagramIcon, tiktokIcon, twitterIcon} from "@shared/utils/icon-creators";
 
 export enum iconCollections {
     socialMedia = 'social-media-icons',
@@ -25,5 +25,6 @@ export const iconListObj: typeIconListObjObject = {
         telegram: (variant: iconVariants, params: typeIconCreateFunctionParams) => telegramIcon(variant, params),
         odnoklassniki: (variant: iconVariants, params: typeIconCreateFunctionParams) => okIcon(variant, params),
         tiktok: (variant: iconVariants, params: typeIconCreateFunctionParams) => tiktokIcon(variant, params),
+        twitter: (variant: iconVariants, params: typeIconCreateFunctionParams) => twitterIcon(variant, params),
     }
 }
