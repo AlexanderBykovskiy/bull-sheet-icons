@@ -1,1 +1,2 @@
+eslint --ext .ts,.tsx "**/*.{ts,tsx}" --fix
 npm run lint
