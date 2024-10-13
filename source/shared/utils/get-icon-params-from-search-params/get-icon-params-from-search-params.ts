@@ -3,9 +3,9 @@ import {
     defaultIconSize, lgBorderRadiusSize, lgBorderWeight,
     maxIconSize, mdBorderRadiusSize, mdBorderWeight,
     minIconSize, smBorderRadiusSize, smBorderWeight, xlBorderRadiusSize, xxLBorderRadiusSize
-} from "@shared/configs/default-icons.config";
-import {typeIconParamsObj} from "./types";
-import {createValidColor} from "@shared/utils/create-valid-color/create-valid-color";
+} from '@shared/configs/default-icons.config'
+import {typeIconParamsObj} from './types'
+import {createValidColor} from '@shared/utils/create-valid-color/create-valid-color'
 
 export const getIconParamsFromSearchParams = (paramsObj: URLSearchParams): typeIconParamsObj => {
 

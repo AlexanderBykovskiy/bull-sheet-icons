@@ -1,8 +1,8 @@
 import {
     typeIconCreateFunctionParams
-} from "../../icon-creators/types";
-import {iconVariants} from "@shared/configs/icons.config";
-import {errorIcon} from "./error-icon";
+} from '../../icon-creators/types'
+import {iconVariants} from '@shared/configs/icons.config'
+import {errorIcon} from './error-icon'
 
 export const facebookIcon = (variant: iconVariants, params: typeIconCreateFunctionParams): string => {
     const {iconSize, borderRadius, borderWeight, fillColor, iconColor, backgroundColor, textColor} = params

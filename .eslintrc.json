@@ -1,3 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    // Отключаем обязательные точки с запятой
+    "semi": ["error", "never"],
+    // Используем одинарные кавычки для JavaScript
+    "quotes": ["error", "single"],
+    // Используем двойные кавычки для JSX атрибутов
+    "jsx-quotes": ["error", "prefer-double"]
+  }
 }

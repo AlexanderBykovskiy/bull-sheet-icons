@@ -1,4 +1,4 @@
-import {typeIconCreateFunctionParams} from "@shared/utils/icon-creators/types";
+import {typeIconCreateFunctionParams} from '@shared/utils/icon-creators/types'
 
 export const errorIcon = (params: typeIconCreateFunctionParams) => {
     const {iconSize, borderRadius, fillColor, iconColor} = params

@@ -1,6 +1,6 @@
 import {
     typeIconCreateFunctionParams
-} from "@shared/utils/icon-creators/types";
+} from '@shared/utils/icon-creators/types'
 import {
     linkedinIcon,
     telegramIcon,
@@ -9,7 +9,7 @@ import {
     tiktokIcon,
     twitterIcon,
     vkIcon, whatsappIcon, youtubeIcon
-} from "@shared/utils/icon-creators";
+} from '@shared/utils/icon-creators'
 
 export enum iconCollections {
     socialMedia = 'social-media-icons',
