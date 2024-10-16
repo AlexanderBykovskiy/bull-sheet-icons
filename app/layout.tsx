@@ -3,6 +3,7 @@ import '@shared/styles/globals.css'
 import React from 'react'
 import {HeaderWidget} from '@widgets/header/header-widget'
 import {primaryFont} from '@shared/configs/font.config'
+import {FooterWidget} from '@widgets/footer/footer'
 
 
 
@@ -19,7 +20,7 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({children}) => {
         <div className="content-container">
           {children}
         </div>
-
+        <FooterWidget/>
       </body>
     </html>
   )
