@@ -1,6 +1,4 @@
-import {
-    typeIconCreateFunctionParams
-} from '../../icon-creators/types'
+import {typeIconCreateFunctionParams} from '../../icon-creators/types'
 import {iconVariants} from '@shared/configs/icons.config'
 import {errorIcon} from './error-icon'
 
