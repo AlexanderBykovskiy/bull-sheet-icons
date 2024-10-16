@@ -1,14 +1,16 @@
 :root {
-  --color-bg-layout: #ffffff;
-  --color-text-main: #333333;
-  --color-accent-main: #ff0000;
+  --c-bg-layout: #ffffff;
+  --c-text-main: #333333;
+  --c-b: #333333;
+  --color-accent-main: #DC2626;
+  --b-r: .25rem
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg-layout: #333333;
-    --color-text-main: #ffffff;
-    --color-accent-main: #0000ff;
+    --c-bg-layout: #333333;
+    --c-text-main: #ffffff;
+    --c-b: #ffffff;
   }
 }
 
@@ -25,8 +27,8 @@ body {
 
 body {
   min-height: 100vh;
-  background-color: var(--color-bg-layout);
-  color: var(--color-text-main);
+  background-color: var(--c-bg-layout);
+  color: var(--c-text-main);
   display: flex;
   flex-direction: column;
   align-items: stretch;
