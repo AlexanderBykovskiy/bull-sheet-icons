@@ -1,0 +1,16 @@
+// Breakpoints
+$bp-sm: 640px
+$bp-md: 768px
+$bp-lg: 1024px
+
+@mixin scr-sm
+  @media only screen and (min-width: #{$bp-sm})
+    @content
+
+@mixin scr-md
+  @media only screen and (min-width: #{$bp-md})
+    @content
+
+@mixin scr-lg
+  @media only screen and (min-width: #{$bp-lg})
+    @content

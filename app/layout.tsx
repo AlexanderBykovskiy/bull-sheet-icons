@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import '@shared/styles/globals.css'
+import '@shared/styles/globals.sass'
 import React from 'react'
 import {HeaderWidget} from '@widgets/header/header-widget'
 import {primaryFont} from '@shared/configs/font.config'

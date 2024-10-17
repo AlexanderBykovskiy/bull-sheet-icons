@@ -1,5 +1,27 @@
+@import "@shared/styles/breackpoints"
+
 .ic-container
-  display: flex
-  flex-direction: column
+  display: grid
   gap: 1rem
+  grid-auto-columns: 1fr
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr
+  grid-template-areas: "preview" "properties" "icons"
+
+@include scr-md
+  .ic-container
+    grid-template-columns: 1fr auto
+    grid-template-rows: auto 1fr
+    grid-template-areas: "preview preview" "icons properties"
+
+.preview
+  grid-area: preview
+
+.properties
+  grid-area: properties
+
+.icons
+  grid-area: icons
+
+
 

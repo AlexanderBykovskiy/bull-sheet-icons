@@ -5,15 +5,21 @@ import {ContentBlock} from '@shared/ui/content-block'
 export const IconConfiguratorWidget: React.FC = () => {
     return (
         <div className={classes['ic-container']}>
-            <ContentBlock label="Preview" padding="sm">
-                Preview
-            </ContentBlock>
-            <ContentBlock label="Properties" padding="sm">
-                Properties
-            </ContentBlock>
-            <ContentBlock label="Icons" padding="sm">
-                Icons
-            </ContentBlock>
+            <div className={classes.preview}>
+                <ContentBlock label="Preview" padding="sm">
+                    Preview
+                </ContentBlock>
+            </div>
+            <div className={classes.properties}>
+                <ContentBlock label="Properties" padding="sm">
+                    Properties
+                </ContentBlock>
+            </div>
+            <div className={classes.icons}>
+                <ContentBlock label="Icons" padding="sm">
+                    <div>Icons</div>
+                </ContentBlock>
+            </div>
         </div>
     )
 }

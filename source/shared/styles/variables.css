@@ -1,0 +1,19 @@
+:root {
+  --t-c-primary: #006666;
+  --t-c-accent: #DC2626;
+
+  --bg-c-primary: #ffff00;
+
+  --br-r: .25rem;
+  --br-c: var(--t-c-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --t-c-primary: #ffff00;
+
+    --bg-c-primary: #006666;
+
+    --br-c: var(--t-c-primary);
+  }
+}
