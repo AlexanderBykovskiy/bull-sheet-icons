@@ -1,0 +1,27 @@
+@import "@shared/styles/screens"
+
+.button
+  position: relative
+  display: flex
+  border: 1px solid transparent
+  padding: .5rem 1rem
+  border-radius: var(--br-r)
+  font-size: .875rem
+  cursor: pointer
+
+  &:active
+    transform: translateY(1px)
+
+  @include scr-hover
+    &:focus
+      outline: 2px solid var(--o-c-primary)
+      outline-offset: 2px
+
+.fill
+  background-color: var(--t-c-primary)
+  color: var(--bg-c-primary)
+
+.outline
+  background-color: transparent
+  color: var(--t-c-primary)
+  border-color: var(--t-c-primary) // TODO: hover effects

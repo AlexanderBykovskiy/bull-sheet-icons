@@ -1,8 +1,32 @@
+'use client'
+
 import React from 'react'
 import classes from './styles.module.sass'
 import {ContentBlock} from '@shared/ui/content-block'
+import {iconCollections, iconListObj} from '@shared/configs/icons.config'
+import {IconList} from '@features/icon-list'
+import {CollectionButtonPanel} from '@features/collection-button-panel'
 
 export const IconConfiguratorWidget: React.FC = () => {
+
+    // const [currentIconProperties, setCurrentIconProperties] = React.useState('')
+    const [collectionList, setCollectionList] = React.useState(() => (Object.keys(iconListObj) as iconCollections[]).map((item: iconCollections, index) => {
+        return {
+            collection: item,
+            isSelected: index === 0
+        }
+    }))
+
+    const onChangeCurrentCollection = (collection: iconCollections) => {
+        const newCollectionList = collectionList.map((item) => {
+            return {
+                ...item,
+                isSelected: item.collection === collection
+            }
+        })
+        setCollectionList(newCollectionList)
+    }
+
     return (
         <div className={classes['ic-container']}>
             <div className={classes.preview}>
@@ -16,8 +40,14 @@ export const IconConfiguratorWidget: React.FC = () => {
                 </ContentBlock>
             </div>
             <div className={classes.icons}>
-                <ContentBlock label="Icons" padding="sm">
-                    <div>Icons</div>
+                <CollectionButtonPanel
+                    collectionPanelList={collectionList}
+                    onChangeCurrentCollection={onChangeCurrentCollection}
+                />
+                <ContentBlock label="Icons" padding="md">
+                    <IconList
+                        collection={iconCollections.socialMedia}
+                    />
                 </ContentBlock>
             </div>
         </div>

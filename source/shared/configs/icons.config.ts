@@ -13,7 +13,7 @@ import {
 
 export enum iconCollections {
     socialMedia = 'social-media-icons',
-    // technologies = 'technologies-icons',
+    technologies = 'technologies-icons',
 }
 
 export enum iconVariants {
@@ -38,5 +38,8 @@ export const iconListObj: typeIconListObjObject = {
         whatsapp: (variant: iconVariants, params: typeIconCreateFunctionParams) => whatsappIcon(variant, params),
         x: (variant: iconVariants, params: typeIconCreateFunctionParams) => xIcon(variant, params),
         youtube: (variant: iconVariants, params: typeIconCreateFunctionParams) => youtubeIcon(variant, params),
+    },
+    [iconCollections.technologies]: {
+        js: (variant: iconVariants, params: typeIconCreateFunctionParams) => okIcon(variant, params),
     }
 }

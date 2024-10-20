@@ -1,6 +1,8 @@
 :root {
-  --t-c-primary: #006666;
+  --t-c-primary: #003333;
   --t-c-accent: #DC2626;
+
+  --o-c-primary: #0033334D;
 
   --bg-c-primary: #ffff00;
 
@@ -12,7 +14,9 @@
   :root {
     --t-c-primary: #ffff00;
 
-    --bg-c-primary: #006666;
+    --o-c-primary: #ffff004D;
+
+    --bg-c-primary: #003333;
 
     --br-c: var(--t-c-primary);
   }
