@@ -1,4 +1,5 @@
 @import "@shared/styles/screens"
+@import "@shared/styles/theme"
 
 .button
   position: relative
@@ -8,6 +9,7 @@
   border-radius: var(--br-r)
   font-size: .875rem
   cursor: pointer
+  transition: background-color .1s ease-in-out
 
   &:active
     transform: translateY(1px)
@@ -17,6 +19,12 @@
       outline: 2px solid var(--o-c-primary)
       outline-offset: 2px
 
+    &:hover
+      background-color: var(--c-primary-lighten-dark)
+
+      @include dark-mode
+        background-color: var(--c-primary-darken-light)
+
 .fill
   background-color: var(--t-c-primary)
   color: var(--bg-c-primary)
@@ -24,4 +32,12 @@
 .outline
   background-color: transparent
   color: var(--t-c-primary)
-  border-color: var(--t-c-primary) // TODO: hover effects
+  border-color: var(--t-c-primary)
+
+  @include scr-hover
+
+  &:hover
+    background-color: var(--c-primary-darken-light)
+
+    @include dark-mode
+      background-color: var(--c-primary-lighten-dark)

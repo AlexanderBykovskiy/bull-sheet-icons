@@ -1,23 +1,42 @@
 :root {
-  --t-c-primary: #003333;
-  --t-c-accent: #DC2626;
+  /* colors */
+  --rgb-color-primary-dark: 7, 89, 133;
+  --rgb-color-lighten-primary-dark: 31, 105, 145;
 
-  --o-c-primary: #0033334D;
+  --rgb-color-primary-light: 216, 232, 11;
+  --rgb-color-darken-primary-light: 194, 208, 9;
 
-  --bg-c-primary: #ffff00;
+  --rgb-color-primary-accent: 220, 38, 38;
 
+  --c-primary-dark: rgb(var(--rgb-color-primary-dark));
+  --c-primary-lighten-dark: rgb(var(--rgb-color-lighten-primary-dark));
+  --c-primary-light: rgb(var(--rgb-color-primary-light));
+  --c-primary-darken-light: rgb(var(--rgb-color-darken-primary-light));
+  --c-primary-accent: rgb(var(--rgb-color-primary-accent));
+
+  /* text */
+  --t-c-primary: var(--c-primary-dark);
+  --t-c-accent: var(--rgb-color-primary-accent);
+
+  /* background */
+  --bg-c-primary: var(--c-primary-light);
+
+    /* border */
   --br-r: .25rem;
-  --br-c: var(--t-c-primary);
+  --br-c: var(--c-primary-dark);
+
+  /* outline */
+  --o-c-primary: rgba(var(--rgb-color-primary-dark), .3);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --t-c-primary: #ffff00;
+    --t-c-primary: var(--c-primary-light);
 
-    --o-c-primary: #ffff004D;
+    --bg-c-primary: var(--c-primary-dark);
 
-    --bg-c-primary: #003333;
+    --br-c: var(--c-primary-light);
 
-    --br-c: var(--t-c-primary);
+    --o-c-primary: rgba(var(--rgb-color-primary-light), .5);
   }
 }
