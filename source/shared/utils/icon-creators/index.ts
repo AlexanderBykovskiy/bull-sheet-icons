@@ -10,3 +10,5 @@ export {vkIcon} from './functions/vk-icon'
 export {whatsappIcon} from './functions/whatsapp-icon'
 export {xIcon} from './functions/x-icon'
 export {youtubeIcon} from './functions/youtube-icon'
+
+export {jsIcon} from './functions/js-icon'

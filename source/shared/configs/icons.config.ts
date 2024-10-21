@@ -8,7 +8,7 @@ import {
     instagramIcon,
     tiktokIcon,
     twitterIcon,
-    vkIcon, whatsappIcon, youtubeIcon, xIcon
+    vkIcon, whatsappIcon, youtubeIcon, xIcon, jsIcon
 } from '@shared/utils/icon-creators'
 
 export enum iconCollections {
@@ -40,6 +40,6 @@ export const iconListObj: typeIconListObjObject = {
         youtube: (variant: iconVariants, params: typeIconCreateFunctionParams) => youtubeIcon(variant, params),
     },
     [iconCollections.technologies]: {
-        js: (variant: iconVariants, params: typeIconCreateFunctionParams) => okIcon(variant, params),
+        js: (variant: iconVariants, params: typeIconCreateFunctionParams) => jsIcon(variant, params),
     }
 }
