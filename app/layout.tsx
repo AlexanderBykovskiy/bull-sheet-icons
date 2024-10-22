@@ -9,7 +9,7 @@ import {FooterWidget} from '@widgets/footer/footer'
 
 export const metadata: Metadata = {
     title: 'bull-sheet-icons',
-    description: 'A collection of icons that can be customized and integrated into your website.',
+    description: 'A iconCollection of icons that can be customized and integrated into your website.',
     icons: {
         icon: [
             { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },

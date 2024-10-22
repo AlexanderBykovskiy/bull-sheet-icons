@@ -1,0 +1,42 @@
+@import "@shared/styles/screens"
+
+.icon-button
+  position: relative
+  display: flex
+  flex-direction: column
+  background-color: transparent
+  color: var(--t-c-primary)
+  border: 1px solid var(--t-c-primary)
+  border-radius: var(--br-r)
+  box-sizing: border-box
+  cursor: pointer
+  padding: 1rem
+
+  @include scr-hover
+    &:focus
+      outline: 2px solid var(--o-c-primary)
+      outline-offset: 2px
+
+
+  &.selected
+    border-width: 2px
+
+.image-container
+  width: 100%
+  padding: 1rem
+
+.icon-name
+  width: 100%
+  overflow: hidden
+  height: 1.2em
+  position: relative
+
+  span
+    font-size: 1.2em
+    display: block
+    position: absolute
+    width: 100%
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    text-align: left

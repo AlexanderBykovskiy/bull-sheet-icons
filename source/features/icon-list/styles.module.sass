@@ -1,0 +1,17 @@
+@import "@shared/styles/breackpoints"
+
+.il-container
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 1rem
+
+  .i-container
+    display: flex
+
+@include scr-md
+  .il-container
+    grid-template-columns: repeat(3, 1fr)
+
+@include scr-lg
+  .il-container
+    grid-template-columns: repeat(6, 1fr)

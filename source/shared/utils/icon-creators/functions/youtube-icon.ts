@@ -5,25 +5,22 @@ import {iconVariants} from '@shared/configs/icons.config'
 import {errorIcon} from './error-icon'
 
 export const youtubeIcon = (variant: iconVariants, params: typeIconCreateFunctionParams): string => {
+
     const {iconSize, borderRadius, borderWeight, fillColor, iconColor, backgroundColor, textColor} = params
 
-    console.log(borderWeight, borderWeight / 2)
     switch (variant) {
         case iconVariants.squareFill:
-            return `
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="${iconSize}" width="${iconSize}">
+            return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="${iconSize}" width="${iconSize}">
                     <rect width="100" height="100" fill="${fillColor}" rx="${borderRadius}" ry="${borderRadius}"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M82.8112 65.772C81.9777 69.3878 79.0198 72.0578 75.4592 72.4554C67.0306 73.3951 58.497 73.4013 49.9965 73.3951C41.4996 73.4013 32.9659 73.3951 24.5348 72.4554C20.9733 72.058 18.0156 69.3878 17.1864 65.772C16 60.624 16 54.9999 16 49.6976C16 44.3954 16.014 38.7738 17.1994 33.6259C18.0286 30.0066 20.9873 27.3401 24.5443 26.9427C32.9763 26.0004 41.5136 25.9967 50.0106 26.0004C58.5067 25.9969 67.0412 26.0004 75.4724 26.9427C79.0338 27.3401 81.9915 30.0066 82.8243 33.6259C84.0002 38.7287 84.0001 44.297 84 49.5583V49.6976C84 54.9999 83.9965 60.624 82.8112 65.772ZM49.5361 55.9438C46.7703 57.3783 44.0028 58.8138 41.2258 60.2538V37.7665C45.0901 39.7831 48.9415 41.7919 52.8013 43.805C56.1377 45.5452 59.4803 47.2886 62.8429 49.0431C58.3909 51.3511 53.9658 53.6463 49.5361 55.9438Z" fill="${iconColor}"/>
                 </svg>`
         case iconVariants.circleFill:
-            return `
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="${iconSize}" width="${iconSize}">
+            return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="${iconSize}" width="${iconSize}">
                     <circle cx="50" cy="50" r="50" fill="${fillColor}"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M82.8112 65.772C81.9777 69.3878 79.0198 72.0578 75.4592 72.4554C67.0306 73.3951 58.497 73.4013 49.9965 73.3951C41.4996 73.4013 32.9659 73.3951 24.5348 72.4554C20.9733 72.058 18.0156 69.3878 17.1864 65.772C16 60.624 16 54.9999 16 49.6976C16 44.3954 16.014 38.7738 17.1994 33.6259C18.0286 30.0066 20.9873 27.3401 24.5443 26.9427C32.9763 26.0004 41.5136 25.9967 50.0106 26.0004C58.5067 25.9969 67.0412 26.0004 75.4724 26.9427C79.0338 27.3401 81.9915 30.0066 82.8243 33.6259C84.0002 38.7287 84.0001 44.297 84 49.5583V49.6976C84 54.9999 83.9965 60.624 82.8112 65.772ZM49.5361 55.9438C46.7703 57.3783 44.0028 58.8138 41.2258 60.2538V37.7665C45.0901 39.7831 48.9415 41.7919 52.8013 43.805C56.1377 45.5452 59.4803 47.2886 62.8429 49.0431C58.3909 51.3511 53.9658 53.6463 49.5361 55.9438Z" fill="${iconColor}"/>
                 </svg>`
         case iconVariants.rectangleFill:
-            return `
-                <svg viewBox="0 0 415 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="${iconSize}" width="${Math.ceil(iconSize * 415 / 100)}">
+            return `<svg viewBox="0 0 415 100" fill="none" xmlns="http://www.w3.org/2000/svg" height="${iconSize}" width="${Math.ceil(iconSize * 415 / 100)}">
                     <mask id="mask" x="0" y="0" width="415" height="100">
                         <rect x="0" y="0" width="415" height="100" fill="black"/>
                         <rect x="0" y="0" width="415" height="100" rx="${borderRadius}" fill="white"/>

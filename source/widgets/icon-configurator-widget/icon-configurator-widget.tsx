@@ -17,7 +17,10 @@ export const IconConfiguratorWidget: React.FC = () => {
         }
     }))
 
+    const [currentCollection, setCurrentCollection] = React.useState<iconCollections>((Object.keys(iconListObj) as iconCollections[])[0])
+
     const onChangeCurrentCollection = (collection: iconCollections) => {
+        setCurrentCollection(collection)
         const newCollectionList = collectionList.map((item) => {
             return {
                 ...item,
@@ -30,7 +33,7 @@ export const IconConfiguratorWidget: React.FC = () => {
     return (
         <div className={classes['ic-container']}>
             <div className={classes.preview}>
-                <ContentBlock label="Preview" padding="sm">
+                <ContentBlock label="Preview">
                     Preview
                 </ContentBlock>
             </div>
@@ -44,9 +47,9 @@ export const IconConfiguratorWidget: React.FC = () => {
                     collectionPanelList={collectionList}
                     onChangeCurrentCollection={onChangeCurrentCollection}
                 />
-                <ContentBlock label="Icons" padding="md">
+                <ContentBlock label="Icons" padding="lg">
                     <IconList
-                        collection={iconCollections.socialMedia}
+                        collection={currentCollection}
                     />
                 </ContentBlock>
             </div>

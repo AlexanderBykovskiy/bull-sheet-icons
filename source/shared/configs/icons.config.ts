@@ -17,6 +17,7 @@ export enum iconCollections {
 }
 
 export enum iconVariants {
+    squareMonoColor = 'square-mono-color',
     squareFill = 'square-fill',
     rectangleFill = 'rectangle-fill',
     circleFill = 'circle-fill',
