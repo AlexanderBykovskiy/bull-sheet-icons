@@ -23,11 +23,15 @@
 
 .image-container
   width: 100%
-  padding: 1rem
+
+  > *
+    display: block
+    margin: .5rem .5rem 1rem
+    overflow: hidden
+    border-radius: calc(var(--br-r) / 2)
 
 .icon-name
   width: 100%
-  overflow: hidden
   height: 1.2em
   position: relative
 

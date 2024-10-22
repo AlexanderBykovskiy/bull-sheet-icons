@@ -8,7 +8,7 @@ import {
     instagramIcon,
     tiktokIcon,
     twitterIcon,
-    vkIcon, whatsappIcon, youtubeIcon, xIcon, jsIcon
+    vkIcon, whatsappIcon, youtubeIcon, xIcon, jsIcon, skypeIcon
 } from '@shared/utils/icon-creators'
 
 export enum iconCollections {
@@ -31,8 +31,9 @@ export const iconListObj: typeIconListObjObject = {
         facebook: (variant: iconVariants, params: typeIconCreateFunctionParams) => okIcon(variant, params),
         instagram: (variant: iconVariants, params: typeIconCreateFunctionParams) => instagramIcon(variant, params),
         linkedin: (variant: iconVariants, params: typeIconCreateFunctionParams) => linkedinIcon(variant, params),
-        telegram: (variant: iconVariants, params: typeIconCreateFunctionParams) => telegramIcon(variant, params),
         odnoklassniki: (variant: iconVariants, params: typeIconCreateFunctionParams) => okIcon(variant, params),
+        skype: (variant: iconVariants, params: typeIconCreateFunctionParams) => skypeIcon(variant, params),
+        telegram: (variant: iconVariants, params: typeIconCreateFunctionParams) => telegramIcon(variant, params),
         tiktok: (variant: iconVariants, params: typeIconCreateFunctionParams) => tiktokIcon(variant, params),
         twitter: (variant: iconVariants, params: typeIconCreateFunctionParams) => twitterIcon(variant, params),
         vkontakte: (variant: iconVariants, params: typeIconCreateFunctionParams) => vkIcon(variant, params),
